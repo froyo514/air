@@ -2,6 +2,8 @@
         margin: 0;
         padding: 0;
         font-family: "Noto Sans KR", sans-serif;
+        text-decoration: none; /* 링크의 밑줄 제거 */
+  		color: inherit; /* 링크의 색상 제거 */
       }
       .clearfix::before {
       }
@@ -111,6 +113,8 @@
       .bottom-header ul a:hover {
         background-color: #ddd;
       }
+      
+      
 
       .hoverable:hover .sub-menu {
         display: block;
@@ -142,9 +146,6 @@
 
 /* 컨텐츠 이미지슬라이드*/
 
-#slide{
-	
-}
 
 .slider {
   position: relative;

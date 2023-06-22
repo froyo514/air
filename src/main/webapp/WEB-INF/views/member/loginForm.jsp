@@ -1,92 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
-  <link rel="stylesheet" href="/resources/css/login.css">
- <%@include file="../includes/header.jsp" %>
+ 
+  <%@include file="../includes/header.jsp" %>
+ 
  <style>
-/* 로그인 폼 스타일 */
-.wrapped_login {
-  background-color: #f8f8f8;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
-  margin: 0 auto;
-}
 
-.login_form {
-  display: flex;
-  flex-direction: column;
-}
-
-.login_form label {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.id_control,
-.pw_control {
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-
-.error {
-  color: #ff0000;
-  margin-top: 5px;
-}
-
-.login_button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.login_button:hover {
-  background-color: #555;
-}
-
-.additional_content {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.additional_content p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.additional_content a {
-  color: #333;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-.social_login {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.social_login p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.social_login .social_buttons {
-  display: flex;
-  justify-content: center;
-}
-
-.social_login .social_buttons button {
-  margin: 0 5px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 </style>
 
 

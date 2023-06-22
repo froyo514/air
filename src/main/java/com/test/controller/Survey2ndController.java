@@ -35,7 +35,7 @@ public class Survey2ndController {
 	private AnswerService answerService;
 	private QuestionAnswerService questionAnswerService;
 	
-	@GetMapping("/55")
+	@GetMapping("/")
 	public String main(Model model) {
 		model.addAttribute("surveyList", surveyService.getSurveyList());
 		return "/survey2nd/main";

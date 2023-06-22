@@ -80,9 +80,9 @@ $(function(){
 						if (attach[0] != null) {
 							if (attach[0].filetype) {
 							let fileCallPath = encodeURIComponent(attach[0].uploadpath+ "\\s_"+attach[0].uuid +"_"+attach[0].filename); 
-							html = "<img src='/display?filename="+fileCallPath+"' width='120px' height='120px'>";
+							html = "<img src='/display?filename="+fileCallPath+"' width='50px' height='50px'>";
 						} else {
-							html = "<img src='/resources/img/attach.png' width='120px' height='120px'>";
+							html = "<img src='/resources/img/attach.png' width='50px' height='50px'>";
 						}
 						$("#"+bno).html(html);
 					}

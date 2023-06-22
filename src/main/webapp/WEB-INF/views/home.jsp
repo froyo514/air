@@ -41,16 +41,34 @@ setTimeout(function() {
       <div id="header">
         <div id ="top-header">
           <div id = "header-right">
-            <nav class="top-nav">
-              <ul>
-                <li><a href="/">오시는길</a></li>
-                <li><a href="/member/signup">회원가입</a></li>
-                <li><a href="/member/login">로그인</a></li>
-              </ul>
-            </nav>
+            <div class = "container">
+		<div class = "wrapper">
+			<div class= "wrapper_head">
+				<div class = "wrapper_title">
+				</div>
+				<div class="wrapper_sub">
+					<c:if test="${!empty auth }">
+						<span><c:out value="${auth.username }"></c:out>님 접속중입니다.</span>
+					</c:if>
+				</div>
+				<nav class="wrapper_menu">
+					<a href="/board/list"><span class = "menu-item">오시는길</span></a>
+					<a href="/member/signup"><span class = "menu-item">회원가입</span></a>
+					<c:choose>
+					<c:when test="${not empty auth}">
+						<a href="/member/logout"><span class="menu-item">로그아웃</span></a>
+					</c:when>
+					<c:otherwise>
+						<a href="/member/login"><span class="menu-item">로그인</span></a>
+					</c:otherwise>
+					</c:choose>
+				</nav>
+			</div>
+		</div>
+	</div>
           </div>
           <div id = "header-left">
-            <div class="banner-text"><a href="/">한국리서치</a></div>
+            <div class="banner-text"><a href="/">땡땡리서치</a></div>
           </div>
         </div>
         <div class="bottom-header" >
@@ -68,7 +86,7 @@ setTimeout(function() {
                 <li class="hoverable">
                 	<a href="#xnb">설문참여하기</a>
                   <ul class="sub-menu">
-                    <li><a href="#public-opinion">공공/여론조사</a></li>
+                    <li><a href="/survey2nd/">공공/여론조사</a></li>
                     <li><a href="#marketing-research">마케팅조사</a></li>
                     <li><a href="#opinion-research">여론조사</a></li>
                     <li><a href="#opinion-research">학술조사</a></li>
@@ -78,7 +96,7 @@ setTimeout(function() {
                		<a href="/">설문만들기</a>
                   <ul class="sub-menu">
                     <li><a href="#public-opinion">서비스소개</a></li>
-                    <li><a href="#public-opinion">설문작성</a></li>
+                    <li><a href="/survey2nd/registerSurvey">설문작성</a></li>
                     <li><a href="#marketing-research">설문의뢰</a></li>
                     <li><a href="#opinion-research">견적사례/문의</a></li>
                   </ul>
