@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.test.mapper.AnswerMapper">
+	<resultMap id="answerMap" type="com.test.domain.AnswerVO">
+		<id column="answer_id" property="answer_id"/>
+		<result column="answer_id" property="answer_id"/>
+		<result column="question_id" property="question_id"/>
+		<result column="answer_text" property="answer_text"/>
+	
+	</resultMap>
+		<insert id="insertAnswer">
+			insert into tbl_answers (question_id, answer_text)
+			values (#{question_id}, #{answer_text})
+		</insert>
+		
+		<delete id = "deleteAnswer">
+				delete from tbl_answers where answer_id = #{answer_id}
+		</delete>
+		
+		<select id = "AnswerList" resultMap="answerMap">
+		select question_id, answer_id,  answer_text from tbl_answers
+		</select>
+		
+		<update id = "updateAnswer">
+		update tbl_answers set answer_text = #{answer_text}
+		where answer_id = #{answer_id}
+		</update>
+		
+	</mapper>
+	
+	

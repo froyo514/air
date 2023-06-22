@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.mapper.QuestionAnswerMapper">
+	<resultMap id="questionAnswerMap" type="com.test.domain.QuestionAnswerVO">
+		<id column="question_id" property="question_id"/>
+		<result column="question_id" property="question_id"/>
+		<result column="survey_id" property="survey_id"/>
+		<result column="question_no" property="question_no"/>
+		<result column="question_text" property="question_text"/>
+		<result column="question_options" property="question_options"/>
+		<result column="question_type" property="question_type"
+			typeHandler="com.test.common.QuestionTypeHandler"/>
+		<result column="question_answer" property="question_answer"
+			typeHandler="com.test.common.QuestionAnswerHandler"/>
+	</resultMap>
+		<select id = "getQuestionAnswerList" resultMap = "questionAnswerMap">
+			SELECT B.question_id, B.survey_id, B.question_no, B.question_text, B.question_options,
+		    B.question_type, 
+		    '[' || B.question_options || ']/'|| '[' || A.answer_text || ']:[' || A.count || ']' AS question_answer
+		FROM
+		    (SELECT DISTINCT question_id, 
+		        LISTAGG(answer_text, ',') WITHIN GROUP (ORDER BY answer_text) OVER(PARTITION BY question_id) AS answer_text, 
+		        LISTAGG(count, ',') WITHIN GROUP (ORDER BY count) OVER(PARTITION BY question_id) AS count
+		    FROM (
+		        SELECT question_id, answer_text, COUNT(answer_text) AS count
+		        FROM tbl_answers 
+		        WHERE question_id IN (SELECT question_id FROM tbl_questions WHERE survey_id = #{survey_id})
+		        GROUP BY question_id, answer_text
+		    )
+		ORDER BY question_id) A
+		LEFT JOIN tbl_questions B ON A.question_id = B.question_id
+		
+		</select>
+</mapper>

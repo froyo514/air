@@ -78,6 +78,14 @@
       }
 
         /* 홈으로회사소개설문참여 호버*/
+       .bottom-header {
+    display: flex;
+    justify-content: center;
+    
+    margin: 0 auto; /* 중앙 정렬을 위해 왼쪽과 오른쪽 여백을 자동으로 설정합니다. */
+  }
+       
+        
       .bottom-header ul {
         font-size: 19px;
         list-style-type: none;
@@ -97,6 +105,7 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        
       }
 
       .bottom-header ul a:hover {

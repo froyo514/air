@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.mapper.SurveyMapper">
+	<insert id="insertSurvey">
+		insert into tbl_survey (survey_name, survey_desc)
+			values (#{survey_name}, #{survey_desc})
+		<selectKey keyProperty="survey_id" resultType="int" order="AFTER">
+			select tbl_survey_seq.currval as survey_id from dual
+		</selectKey>
+	</insert>
+	<select id="getSurvey" resultType="com.test.domain.SurveyVO">
+		select survey_id, survey_name, survey_desc from tbl_survey
+		where survey_id = #{survey_id}
+	</select>
+	
+	<select id="getSurveyList" resultType="com.test.domain.SurveyVO">
+		select survey_id, survey_name, survey_desc from tbl_survey
+		
+	</select>
+	<update id="updateSurvey">
+		update tbl_survey set survey_name=#{survey_name}, survey_desc =#{survey_desc}
+		where survey_id=#{survey_id}
+	</update>
+	<delete id="deleteSurvey">
+		delete from tbl_survey where survey_id=#{survey_id}
+	</delete>
+</mapper>
