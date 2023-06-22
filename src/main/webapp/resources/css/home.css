@@ -1,0 +1,169 @@
+   * {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      .clearfix::before {
+      }
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+      #wrap {
+        width: 100%;
+        height: 995px;
+        background-color: #ff0000;
+      }
+      #header {
+        height: 155px;
+        width: 100%;
+      }
+      
+      .bottom-header {
+        float: left;
+        height: 55px;
+        width: 100%;
+        background-color: rgb(162, 211, 255);
+      }
+      #contents {
+        float: left;
+        height:795px;
+        width: 2133px;
+        background-color: #008b46;
+      }
+      #top-header {
+        height: 100px;
+        background-color: #464242;
+        padding: 10px 0;
+        box-sizing: border-box;
+        color: #fff;
+      }
+      .banner-text {
+        font-size: 50px;
+        text-align: center;
+        
+      }
+      #header-right{
+        float:right;
+        width: 300px;
+      }
+      #header-left{
+        float:left;
+        width: 300px;
+      }
+
+        /* 로그인회원가입오시는길 호버 */
+      .top-nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .top-nav li {
+        float: right;
+      }
+
+      .top-nav li a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .top-nav li a:hover {
+        background-color: #555;
+      }
+
+        /* 홈으로회사소개설문참여 호버*/
+      .bottom-header ul {
+        font-size: 19px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        float: right;
+      }
+
+      .bottom-header li {
+        float: left;
+      }
+
+      .bottom-header li a {
+        display: block;
+        color: #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .bottom-header ul a:hover {
+        background-color: #ddd;
+      }
+
+      .hoverable:hover .sub-menu {
+        display: block;
+      }
+
+      .sub-menu {
+        display: none;
+        position: absolute;
+        background-color: #ddd;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .sub-menu li {
+        float: none;
+      }
+
+      .sub-menu li a {
+        padding: 12px 16px;
+        color: #333;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .sub-menu li a:hover {
+        background-color: #ccc;
+      }
+
+/* 컨텐츠 이미지슬라이드*/
+
+#slide{
+	
+}
+
+.slider {
+  position: relative;
+  width: 2133px;
+  height: 795px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%%;
+  opacity: 0;
+  transition: opacity 1s;
+  object-fit: contain;
+}
+
+
+.slide.active {
+  opacity: 1;
+}
+
+  /* 푸터*/
+      #footer { 
+    float: left;
+     width:100%; 
+     height:90px; 
+     background-color: khaki;
+   }

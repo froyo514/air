@@ -1,0 +1,77 @@
+/* Board Table */
+.board_table {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Table Headers and Cells */
+.board_table th,
+.board_table td {
+  padding: 8px;
+}
+
+/* Board Content */
+.board_content {
+  min-height: 100px;
+}
+
+/* Link in Table */
+.board_table .get {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Board Rows */
+.board_table .tr_list {
+  background-color: #fff;
+}
+
+/* Heading */
+.board_table .table_title th {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+  .write_btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+     .board_content a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .board_content a:hover {
+      text-decoration: underline;
+    }
+    .board_page {
+      margin-top: 20px;
+    }
+    .pagination {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .paginate_button {
+      margin: 0 5px;
+    }
+    .paginate_button a {
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .active_list a {
+      background-color: #0066cc;
+      color: white;
+    }

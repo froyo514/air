@@ -1,0 +1,43 @@
+/* Wrapper */
+.wrapper_read {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Heading */
+.read_head h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Table */
+.read_table th,
+.read_table td {
+  padding: 8px;
+}
+
+/* Content */
+.read_content {
+  min-height: 100px;
+  padding: 8px;
+}
+
+/* Buttons */
+.read_button {
+  padding: 8px 16px;
+  margin-right: 8px;
+}
+
+/* Replies */
+.read_reply h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.reply_list .reply li {
+  padding: 8px;
+}
