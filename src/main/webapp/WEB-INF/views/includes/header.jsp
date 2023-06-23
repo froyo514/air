@@ -205,7 +205,7 @@
 	</div>
           </div>
           <div id = "header-left">
-            <div class="banner-text"><a href="/">한국리서치</a></div>
+            <div class="banner-text"><a href="/">배너들어갈곳</a></div>
           </div>
         </div>
         <div class="bottom-header" >

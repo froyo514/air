@@ -14,12 +14,16 @@
 			if(operation === 'remove') {
 				formObj.attr("action", "/board/remove");
 			} else if(operation ==='list') {
-				var pageNumTag = $("input[name='pageNum']").clone();
-				var amountTag = $("input[name='amount']").clone();
+				let pageNumTag = $("input[name='pageNum']").clone();
+				let amountTag = $("input[name='amount']").clone();
+				let typeTag = $("input[name='type']").clone();
+				let keywordTag = $("input[name='keyword']").clone();
 				formObj.empty();
 				formObj.attr("action", "/board/list").attr("method", "get");
 				formObj.append(pageNumTag);
 				formObj.append(amountTag);
+				formObj.append(typeTag);
+				formObj.append(keyword Tag);
 			}else if (operation === 'modify'){
 			let str = "";
 			$(".uploadResult ul li").each (function(i, listItem) {
@@ -157,6 +161,8 @@
 	<form action="/board/modify" method="post">
 		<input type='hidden' name='pageNum' value='<c:out value="${criteria.pageNum}"/>'>
 		<input type='hidden' name='amount' value='<c:out value="${criteria.amount}"/>'>
+		<input type='hidden'  name='type' value='<c:out value="${criteria.type}"/>'>
+		<input type='hidden'  name='keyword' value='<c:out value="${criteria.keyword}"/>'>
 		<table class="read_table">
 			<thead>
 				<tr class="read_table_title">
