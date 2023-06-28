@@ -10,6 +10,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -18,8 +19,8 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
-@ComponentScan(basePackages= {"com.test.service","com.test.task"})
-
+@ComponentScan(basePackages= {"com.test.service","com.test.task","com.test.aop"})
+@EnableAspectJAutoProxy
 @EnableScheduling
 @EnableTransactionManagement
 @MapperScan(basePackages= {"com.test.mapper"})

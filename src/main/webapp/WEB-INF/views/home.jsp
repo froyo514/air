@@ -1,5 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%> 
 
@@ -52,7 +51,7 @@ setTimeout(function() {
 					</c:if>
 				</div>
 				<nav class="wrapper_menu">
-					<a href="/board/list"><span class = "menu-item">오시는길</span></a>
+					<a href="/board/map"><span class = "menu-item">오시는길</span></a>
 					<a href="/member/signup"><span class = "menu-item">회원가입</span></a>
 					<c:choose>
 					<c:when test="${not empty auth}">
@@ -68,14 +67,14 @@ setTimeout(function() {
 	</div>
           </div>
           <div id = "header-left">
-            <div class="banner-text"><a href="/">배너들어갈곳</a></div>
+            <div id="banner-text"><a href="/"><img src="/resources/img/banner.jpg" style="height: 90px;"></a></div>
           </div>
         </div>
         <div class="bottom-header" >
             <nav>
               <ul>
                 <li class="hoverable">
-                  <a href="#xnb">회사소개</a>
+                  <a href="/board/sogae">회사소개</a>
                   <ul class="sub-menu">
                     <li><a href="#greeting">인사말</a></li>
                     <li><a href="#greeting">회사연혁</a></li>
@@ -122,22 +121,14 @@ setTimeout(function() {
         </div>
       </div>
         <div id="contents">
+        
           <div class="slider">
   			<img src="/resources/img/main6.jpg" class="slide" />
  			<img src="/resources/img/main4.jpg" class="slide" />
   			<img src="/resources/img/main5.jpg" class="slide" />
        	 </div>
+       	 <div>
+       	 	<span>정확하고 신뢰할수있는 온라인 리서치</span>
+       	 </div>
       </div>
-
-  <div id ="footer">
-    <span style="color:rgb(88, 85, 81);" class="wixui-rich-text__text">
-      서울특별시 동작구 동작대로99길 99, 99층 
-      (주)한국정책리서치&nbsp; |&nbsp; 
-      대표이사 : 윤종현&nbsp; |&nbsp; 
-      사업자등록증 : 999-999-99999
-       대표전화 : 02-999-9999&nbsp; |&nbsp; 
-       문의사항 : <a data-auto-recognition="true" href="mailto:support@kprg.re.kr" class="wixui-rich-text__text">support@kprg.re.kr</a>&nbsp; |&nbsp; </span>
-      </div>
-    </div>
-  </body>
-</html>
+<%@include file="./includes/footer.jsp" %>

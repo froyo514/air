@@ -1,4 +1,79 @@
 /* Board Table */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .board_table {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  .board_table th,
+  .board_table td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .board_page {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .pagination {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pagination li {
+    display: inline;
+    margin-right: 5px;
+  }
+
+  .pagination li a {
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .pagination li a:hover {
+    background-color: #f5f5f5;
+  }
+
+  .searchform {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .searchform select,
+  .searchform input[type="text"] {
+    margin-right: 10px;
+    padding: 5px;
+  }
+
+  .board_bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .write_btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
 .board_table {
   max-width: 50%;
   margin: 0 auto;

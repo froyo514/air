@@ -61,6 +61,14 @@ public class BoardController {
 		public String registerForm() {
 			return "/board/registerForm";
 		}
+		@GetMapping("/map")
+		public String map() {
+			return "/board/map";
+		}
+		@GetMapping("/sogae")
+		public String sogae() {
+			return "/board/sogae";
+		}
 		
 		@PostMapping("/register")
 		public String register(BoardVO vo, RedirectAttributes rttr) {

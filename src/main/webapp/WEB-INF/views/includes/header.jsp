@@ -13,7 +13,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" type="text/css" rel="stylesheet">
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<title>헤더</title>
+<title>title</title>
 <style>
    * {
         margin: 0;
@@ -60,10 +60,9 @@
      
       #top-header {
         height: 100px;
-        background-color: #464242;
+        background-color:white;
         padding: 10px 0;
         box-sizing: border-box;
-        color: #fff;
       }
       .banner-text {
         font-size: 50px;
@@ -205,7 +204,7 @@
 	</div>
           </div>
           <div id = "header-left">
-            <div class="banner-text"><a href="/">배너들어갈곳</a></div>
+             <div class="banner-text"><a href="/"><img src="/resources/img/banner.jpg" style="height: 90px;"></a></div>
           </div>
         </div>
         <div class="bottom-header" >
@@ -258,11 +257,7 @@
             </nav>
         </div>
       </div>
-      <div id="contents">
-          <div class="slider">
-  			<img src="/resources/img/head2.jpg" class="slide"/>
-       	 </div>
-      </div>
+      
 </body>
 </html>
 

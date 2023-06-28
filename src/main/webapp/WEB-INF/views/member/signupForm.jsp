@@ -4,6 +4,107 @@
 <%@include file="../includes/header.jsp"%>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/resources/js/test1.js" defer></script>
+
+<style>
+.wrapper_signup {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  padding-left: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.wrapper_signup .wrap__title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.wrapper_signup form {
+  width: 100%;
+}
+
+.wrapper_signup .main__input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.wrapper_signup .error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.wrapper_signup .wrap__phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.wrapper_signup .wrap__phone input {
+  width: 33%;
+  margin-right: 5px;
+}
+
+.wrapper_signup .wrap__auth {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.wrapper_signup .auth_button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.wrapper_signup .select__box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.wrapper_signup .wrap__radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.wrapper_signup .wrap__radio div {
+  margin-right: 10px;
+}
+
+.wrapper_signup .confirm__button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wrapper_signup .confirm__button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.wrapper_signup .confirm__button:hover {
+  background-color: #0056b3;
+}
+  }
+</style>
 <script type="text/javascript">
 
 
