@@ -61,6 +61,7 @@ public class BoardController {
 		public String registerForm() {
 			return "/board/registerForm";
 		}
+		//////서베이추가/////
 		@GetMapping("/map")
 		public String map() {
 			return "/board/map";
@@ -68,6 +69,10 @@ public class BoardController {
 		@GetMapping("/sogae")
 		public String sogae() {
 			return "/board/sogae";
+		}
+		@GetMapping("/chamga")
+		public String chamga() {
+			return "/board/chamga";
 		}
 		
 		@PostMapping("/register")

@@ -171,18 +171,8 @@ $(function() {
         </form>
 
         <div class="additional_content">
-          <p>다른 계정이 있으신가요?</p>
           <a href="/member/register">회원가입</a> |
           <a href="/member/forgot-password">비밀번호 찾기</a>
-        </div>
-
-        <div class="social_login">
-          <p>소셜 계정으로 로그인</p>
-          <div class="social_buttons">
-            <button>Facebook</button>
-            <button>Google</button>
-            <button>Twitter</button>
-          </div>
         </div>
       </div>
     </td>

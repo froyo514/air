@@ -16,58 +16,27 @@
 <title>title</title>
 <style>
    * {
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         font-family: "Noto Sans KR", sans-serif;
         text-decoration: none; /* 링크의 밑줄 제거 */
   		color: inherit; /* 링크의 색상 제거 */
       }
-      .clearfix::before {
-      }
-      .clearfix::after {
-        display: block;
-        content: "";
-        clear: both;
-      }
-      #wrap {
-        width: 100%;
-        height: 995px;
-        background-color: #ff0000;
-      }
+
       #header {
-        height: 155px;
+        height:200px;
         width: 100%;
       }
       
-      .bottom-header {
-        float: left;
-        height: 55px;
-        width: 100%;
-        background-color: rgb(162, 211, 255);
-      }
-      #contents {
-      text-align: center;
-        float: left;
-        height:250px;
-        width: 2133px;
+      #banner-text{
       
       }
-      .slide {
-		height:200px;
-		width:1500px;
-		
-		}     
-     
+
       #top-header {
-        height: 100px;
+        height: 120px;
         background-color:white;
         padding: 10px 0;
         box-sizing: border-box;
-      }
-      .banner-text {
-        font-size: 50px;
-        text-align: center;
-        
       }
       #header-right{
         float:right;
@@ -78,6 +47,12 @@
         width: 300px;
       }
 
+		.bottom-header {
+        float: left;
+        height: 80px;
+        width: 100%;
+        background-color: rgb(162, 211, 255);
+      }
         /* 로그인회원가입오시는길 호버 */
       .top-nav ul {
         list-style-type: none;
@@ -188,7 +163,7 @@
 					</c:if>
 				</div>
 				<nav class="wrapper_menu">
-					<a href="/board/list"><span class = "menu-item">오시는길</span></a>
+					<a href="/board/map"><span class = "menu-item">오시는길</span></a>
 					<a href="/member/signup"><span class = "menu-item">회원가입</span></a>
 					<c:choose>
 					<c:when test="${not empty auth}">
@@ -204,60 +179,47 @@
 	</div>
           </div>
           <div id = "header-left">
-             <div class="banner-text"><a href="/"><img src="/resources/img/banner.jpg" style="height: 90px;"></a></div>
+             <div class="banner-text"><a href="/"><img src="/resources/img/banner.jpg" style="height: 95px;"></a></div>
           </div>
         </div>
         <div class="bottom-header" >
-            <nav>
+             <nav>
               <ul>
                 <li class="hoverable">
-                  <a href="#xnb">회사소개</a>
+                  <a href="/board/sogae">회사소개</a>
                   <ul class="sub-menu">
-                    <li><a href="#greeting">인사말</a></li>
                     <li><a href="#greeting">회사연혁</a></li>
                     <li><a href="#business-areas">사업분야</a></li>
                     <li><a href="#key-achievements">주요실적</a></li>
                   </ul>
                 </li>
+                
                 <li class="hoverable">
-                	<a href="#xnb">설문참여하기</a>
-                  <ul class="sub-menu">
-                    <li><a href="#public-opinion">공공/여론조사</a></li>
-                    <li><a href="#marketing-research">마케팅조사</a></li>
-                    <li><a href="#opinion-research">여론조사</a></li>
-                    <li><a href="#opinion-research">학술조사</a></li>
-                  </ul>
-                </li>
-                <li class="hoverable">
-               		<a href="/">설문만들기</a>
+               		<a href="/survey2nd/registerSurvey">설문만들기</a>
                   <ul class="sub-menu">
                     <li><a href="#public-opinion">서비스소개</a></li>
-                    <li><a href="#public-opinion">설문작성</a></li>
                     <li><a href="#marketing-research">설문의뢰</a></li>
                     <li><a href="#opinion-research">견적사례/문의</a></li>
                   </ul>
                  </li>
                  <li class="hoverable">
-               		<a href="/board/list">인재채용</a>
-                    <ul class="sub-menu">
-                  	  <li><a href="#public-opinion">조직소개</a></li>
-                  	  <li><a href="#marketing-research">채용안내</a></li>
-                   	 <li><a href="#opinion-research">채용공고</a></li>
+                	<a href="/survey2nd/">설문참여하기</a>
+                  <ul class="sub-menu">
+                	  <li><a href="#public-opinion">서비스소개</a></li>
                   </ul>
-                 </li>
+                </li>
                  <li class="hoverable">
-               		<a href="/board/list">고객지원(게시판)</a>
+               		<a href="/board/list">문의게시판</a>
                   <ul class="sub-menu">
                     <li><a href="#public-opinion">공지사항</a></li>
-                    <li><a href="#marketing-research">문의게시판</a></li>
-                    <li><a href="#opinion-research">진행중인이벤트</a></li>
+                    <li><a href="#marketing-research">이벤트</a></li>
                   </ul>
                  </li>
+                 
               </ul>
             </nav>
         </div>
       </div>
-      
 </body>
 </html>
 
