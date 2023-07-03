@@ -16,7 +16,7 @@ margin:auto;
 }
 #text{
 	font-size:90px;
-	height:250px;
+	height:150px;
 	text-align:center;
 	text-decoration-line: underline;
     text-underline-position:under;
@@ -50,7 +50,7 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 
 
 <div id ="text">오시는길</div>
-<div id="map" style="width:1300px;height:350px;"></div>
+<div id="map" style="width:1300px;height:250px;"></div>
 <br><br><br><br>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=53440126ce55db7e138fdc0ebcc839d0"></script>
 <script>
@@ -74,7 +74,7 @@ position: markerPosition
 //마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);
 
-var iwContent = '<div style="padding:5px;">개미쳤네 <br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+var iwContent = '<div style="padding:5px;">온라인 서베이<br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 iwPosition = new kakao.maps.LatLng(35.87288, 128.59733); //인포윈도우 표시 위치입니다
 
 //인포윈도우를 생성합니다
@@ -101,7 +101,7 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 
 </script>
-35.87288, 128.59733  35.87288, 128.59733
+
 <div id=vihicle>
  주소 : (41912) 대구광역시 중구 경상감영길 177 (동문동 19-1)<br>
  지하철 : 1호선 : 중앙로역 하차 3번출구<br>

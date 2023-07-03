@@ -9,7 +9,7 @@
  #footer { 
     float: left;
      width:100%; 
-     height:70px; 
+     height:100px; 
     background-color:yellow;
    
    }

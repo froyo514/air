@@ -120,6 +120,7 @@ $(function(){
 </script>
 </head>
 <body>
+<div id ="text">게시판</div>
 <table class="board_table">
  	<thead>
          <tr class="table_title">

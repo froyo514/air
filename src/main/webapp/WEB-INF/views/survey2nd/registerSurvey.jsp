@@ -34,9 +34,63 @@ $(function() {
 });
 
 </script>
+<style>
+body {
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		form {
+			width: 500px;
+			margin: 0 auto;
+		}
+
+		label {
+			display: inline-block;
+			width: 120px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		input[type="text"], textarea {
+			width: 300px;
+			padding: 5px;
+			border: 1px solid #ccc;
+		}
+
+		textarea {
+			height: 100px;
+		}
+
+		input[type="file"] {
+			margin-bottom: 10px;
+		}
+
+		input[type="submit"] {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+
+		.error-message {
+			color: red;
+		}
+		#text{
+	font-size:70px;
+	height:150px;
+	text-align:center;
+	text-decoration-line: underline;
+    text-underline-position:under;
+}
+</style>
 </head>
 <body>
-	<h1>register Survey</h1>
+	<div id ="text">설문등록하기</div>
 	<form:form action="/survey2nd/registerSurvey" method="post" modelAttribute="surveyVO">
 	
  <div>

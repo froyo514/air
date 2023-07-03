@@ -275,7 +275,125 @@ $(function() {
 	
 });
 </script>
+<style>
+	.wrapper_read {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+    }
 
+    .read_head {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .read_head h3 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .read_line {
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        margin-bottom: 20px;
+    }
+
+    .read_table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .read_table th,
+    .read_table td {
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .read_table_title th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .read_table_content {
+        margin-top: 20px;
+    }
+
+    .read_content {
+        width: 100%;
+        min-height: 200px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        resize: vertical;
+        font-family: Arial, sans-serif;
+    }
+
+    .article-bottom {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .field3.get-th {
+        flex: 1;
+    }
+
+    .field3.get-td {
+        flex: 4;
+    }
+
+    .uploadResult ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .read_bottom {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .read_button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        margin-right: 10px;
+    }
+
+    .read_button:hover {
+        background-color: #555;
+    }
+
+    .read_reply {
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    .reply_list {
+        margin-top: 20px;
+    }
+
+    .reply_list h4 {
+        margin-bottom: 10px;
+    }
+
+    .reply_list ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .panel-footer {
+        margin-top: 20px;
+        text-align: center;
+    }
+</style>
 <div class="wrapper_read">
 	<div class="read_head">
 		<h3>게시글 읽기</h3>
