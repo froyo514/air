@@ -85,7 +85,7 @@
 
 <body>
 	<div id = "text">설문참여하기</div>
-	<c:if test="${!empty surveyList }">
+	<%-- <c:if test="${!empty surveyList }">
 		<c:forEach items="${surveyList }" var="item" varStatus="status">
 			<p>
 				<label><c:out value="${status.index+1 }.${item.survey_name }"/>:</label>
@@ -97,8 +97,8 @@
 				
 		</c:forEach>
 	</c:if>
-	<!-- <h1>설문조사 등록 : <a href=<c:url value="/survey2nd/registerSurvey"/>>시작</a></h1> -->
-	<c:out value="${status.index}.${item.survey_name }"/>
+	 <h1>설문조사 등록 : <a href=<c:url value="/survey2nd/registerSurvey"/>>시작</a></h1>
+	<c:out value="${status.index}.${item.survey_name }"/> --%>
 <div class="con">
     <div class="box">
         <h1>정부정책조사 ~7/30</h1>

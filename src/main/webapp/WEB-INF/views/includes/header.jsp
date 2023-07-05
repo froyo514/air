@@ -195,7 +195,7 @@
                 </li>
                 
                 <li class="hoverable">
-               		<a href="/survey2nd/registerSurvey">설문만들기</a>
+               		<a href="/newsurvey/man">설문만들기</a>
                   <ul class="sub-menu">
                     <li><a href="#public-opinion">서비스소개</a></li>
                     <li><a href="#marketing-research">설문의뢰</a></li>

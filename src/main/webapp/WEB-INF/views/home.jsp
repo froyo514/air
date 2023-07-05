@@ -35,15 +35,15 @@ setTimeout(function() {
 
 #contents{
   background-color: green;
-  width: 100%;
-  height: 740px;
+  width: 2130px;
+  height:740px;
 }
 
 
 .con {
   position: relative;
   width: 100%;
-  height: 740px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -51,7 +51,7 @@ setTimeout(function() {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  
   opacity: 0;
   transition: opacity 1s;
   object-fit: contain;
