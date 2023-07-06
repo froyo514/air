@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
  
-  <%@include file="../includes/header.jsp" %>
+ 
  
 <style>
 table {
@@ -101,6 +101,10 @@ table {
   .wrapped_login .social_buttons button:hover {
     background-color: #0056b3;
   }
+  #wrap{
+  height:930px;
+  }
+  
 </style>
 
 
@@ -136,11 +140,12 @@ $(function() {
 	alert(txt);
 });
 </script>
-
+<div id = "wrap">
 <table>
   <tr>
     <td colspan="2" class="center">
       <div class="wrapped_login">
+      	<img src="/resources/img/banner.jpg" style="height: 95px;">
         <form action="/member/login" class="login_form" method="post">
           <div class="form_id">
             <label for="username">E-mail</label>
@@ -178,5 +183,6 @@ $(function() {
     </td>
   </tr>
 </table>
+ </div>
 
  <%@include file="../includes/footer.jsp" %>

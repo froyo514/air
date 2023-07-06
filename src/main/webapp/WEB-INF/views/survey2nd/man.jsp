@@ -154,11 +154,9 @@
 <body>
     <div id="text">설문조사 만들기</div>
     <form action="surveySumbit" method="post">
+                <label for="surveyName">설문조사 이름:</label>
+                <input type="text" name="surveyName" id="surveyName">
         <table>
-            <tr>
-                <td><label for="surveyName">설문조사 이름:</label></td>
-                <td><input type="text" name="surveyName" id="surveyName"></td>
-            </tr>
             <tr>
                 <td><label for="surveyContent">설문 내용:</label></td>
                 <td><input type="text" name="questionName" id="questionName"></td>
@@ -190,4 +188,3 @@
     </form>
 </body>
 </html>
-

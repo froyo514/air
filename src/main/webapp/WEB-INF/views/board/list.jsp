@@ -197,4 +197,4 @@ $(function(){
    		<button class="write_btn" id="write_btn">글쓰기</button>
    </div>
    
-  <%@include file="../includes/footer.jsp" %>
+
