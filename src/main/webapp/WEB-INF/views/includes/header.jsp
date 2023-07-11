@@ -87,7 +87,7 @@
        
         
       .bottom-header ul {
-        font-size: 19px;
+        font-size: 35px;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -197,7 +197,7 @@
                 <li class="hoverable">
                		<a href="/newsurvey/man">설문만들기</a>
                   <ul class="sub-menu">
-                    <li><a href="#public-opinion">서비스소개</a></li>
+                    <li><a href="/newsurvey/man2">서비스소개</a></li>
                     <li><a href="#marketing-research">설문의뢰</a></li>
                     <li><a href="#opinion-research">견적사례/문의</a></li>
                   </ul>

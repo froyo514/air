@@ -9,8 +9,8 @@
  #footer { 
     float: left;
      width:100%; 
-     height:50px; 
-    background-color:white;
+     height:95px; 
+    background-color:rgb(162, 211, 255);
    text-align: center;
    }
 </style>
