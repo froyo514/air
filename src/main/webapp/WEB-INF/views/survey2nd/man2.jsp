@@ -1,4 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
+<%@include file="../includes/header.jsp" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            var questionCounter = 0;
+            var questionCounter = 1;
 
             // 문항 추가 버튼 클릭 시 새로운 문항을 추가합니다.
             $("#addQuestion").click(function() {
@@ -20,9 +24,12 @@
                 $("#questionsContainer").append(questionHtml);
             });
 
-            // 문항 삭제 함수
+         // 문항 삭제 함수
             window.removeQuestion = function(questionId) {
-                $("#question" + questionId).remove();
+                var confirmed = confirm("질문을 삭제하시겠습니까?");
+                if (confirmed) {
+                    $("#question" + questionId).remove();
+                }
             };
 
             // 폼 제출 시 확인 창을 표시하여 제출 여부를 확인합니다.
@@ -34,24 +41,24 @@
     </script>
 </head>
 <body>
-    <h1>Survey Form</h1>
+    <h1>설문만들기</h1>
+<form method="post" action="/newsurvey/form">
+<button type="button" id="addQuestion">Add Question</button><br><br>
+    <label for="title">설문조사이름</label>
+    <input type="text" id="title" name="title" required><br><br>
 
-    <form method="post" action="/newsurvey/form">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required><br><br>
-
-        <div id="questionsContainer">
-            <!-- 기본 문항 -->
-            <div id="question0">
-                <label for="questionText0">Question 1:</label>
-                <input type="text" id="questionText0" name="questions[0].questionText" required><br><br>
-                <button type="button" onclick="removeQuestion(0)">Remove</button><br><br>
-            </div>
+    <div id="questionsContainer">
+        <!-- 기본 문항 -->
+        <div id="question0">
+            <label for="questionText0">Question 1:</label>
+            <input type="text" id="questionText0" name="questions[0].questionText" required><br><br>
+            <button type="button" onclick="removeQuestion(0)">Remove</button><br><br>
         </div>
+    </div>
 
-        <button type="button" id="addQuestion">Add Question</button><br><br>
+    
 
-        <input type="submit" value="Submit">
-    </form>
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>
