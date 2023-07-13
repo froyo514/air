@@ -31,7 +31,7 @@ public class NewSurveyController {
 		
 	}
 	
-	@GetMapping("/man2") //설문조사양식을 등록한다
+	@GetMapping("/man2") //설문조사양식페이지 > 등록하고 /from 전달
     public String showSurveyForm(Model model) {
         model.addAttribute("surveyForm", new SurveyForm());
         return "/survey2nd/man2";
@@ -55,9 +55,9 @@ public class NewSurveyController {
 	    }
     
 
-    @GetMapping("/survey/thankyou")
+    @PostMapping("/man5")
     public String showThankYouPage() {
-        return "thankYou";
+        return "/survey2nd/man5";
     }
    
 }

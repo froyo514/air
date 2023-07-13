@@ -8,6 +8,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Survey Response</title>
+    <script>
+        setTimeout(function() {
+            window.location.href = "/newsurvey/man4";
+        }, 1000); // 1초 후에 리다이렉트 수행
+    </script>
 </head>
 <body>
     <h1>Survey Response</h1>
@@ -19,7 +24,10 @@
 ※ 위의 개인정보 수집·이용에 대한 동의를 거부할 권리가 있습니다.
 그러나 동의를 거부할 경우 수집목적에 해당하는 서비스를 제공받으실 수 없습니다.
 
-위와 같이 개인정보를 수집·이용하는데 동의하십니까?
+위와 같이 개인정보를 수집·이용하는데 동의하십니까? 
+
+
+자동으로 이동합니다.
     <a href="/newsurvey/man4">
             	<button>확인하러가보기</button></a>
 </body>

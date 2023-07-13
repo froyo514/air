@@ -35,6 +35,9 @@
             // 폼 제출 시 확인 창을 표시하여 제출 여부를 확인합니다.
             $("form").submit(function() {
                 var confirmed = confirm("제출하면 수정이 불가능합니다. 제출하시겠습니까?");
+                if (confirmed) {
+                    alert("제출되었습니다");
+                }
                 return confirmed;
             });
         });

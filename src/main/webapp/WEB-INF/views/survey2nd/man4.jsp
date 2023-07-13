@@ -10,31 +10,17 @@
 <body>
     <h1><p>Title: ${surveyForm.title}</p></h1>
     
-    
-    <h3>Questions:</h3>
-    <form method="post" action="/survey/response/submit">
-    <c:forEach var="question" items="${surveyForm.questions}">
-        <p>${question.questionText}</p>
-        		<input type="radio" name="answers[${questionIndex}].selectedChoice" value="5" required> 매우 그렇다<br>
-                <input type="radio" name="answers[${questionIndex}].selectedChoice" value="4" required> 그렇다<br>
-                <input type="radio" name="answers[${questionIndex}].selectedChoice" value="3" required> 보통이다<br>
-                <input type="radio" name="answers[${questionIndex}].selectedChoice" value="2" required> 그렇지 않다<br>
-                <input type="radio" name="answers[${questionIndex}].selectedChoice" value="1" required> 전혀 그렇지 않다<br>
+    <form method="post" action="/newsurvey/man5">
+    <c:forEach var="question" items="${surveyForm.questions}" varStatus="loop">
+        <p>Question ${loop.index + 1}: ${question.questionText}</p>
+        <c:set var="questionIndex" value="${loop.index}" scope="page" />
+        <input type="radio" name="answers[${pageScope.questionIndex}].selectedChoice" value="5" required> 매우 그렇다<br>
+        <input type="radio" name="answers[${pageScope.questionIndex}].selectedChoice" value="4" required> 그렇다<br>
+        <input type="radio" name="answers[${pageScope.questionIndex}].selectedChoice" value="3" required> 보통이다<br>
+        <input type="radio" name="answers[${pageScope.questionIndex}].selectedChoice" value="2" required> 그렇지 않다<br>
+        <input type="radio" name="answers[${pageScope.questionIndex}].selectedChoice" value="1" required> 전혀 그렇지 않다<br>
     </c:forEach>
-      <%--   <c:forEach var="question" items="${surveyForm.questions}">
-            <p>55: ${question.questionText}</p>
-          
-            <c:if test="${question.answerType == 'likertScale'}">
-                <input type="radio" name="answers[${questionIndex}].selectedChoice" value="5" required> 매우 그렇다<br>
-                <input type="radio" name="answers[${questionIndex}].selectedChoice" value="4" required> 그렇다<br>
-                <input type="radio" name="answers[${questionIndex}].selectedChoice" value="3" required> 보통이다<br>
-                <input type="radio" name="answers[${questionIndex}].selectedChoice" value="2" required> 그렇지 않다<br>
-                <input type="radio" name="answers[${questionIndex}].selectedChoice" value="1" required> 전혀 그렇지 않다<br>
-            </c:if>
-            <input type="hidden" name="answers[${questionIndex}].questionText" value="${question.text}">
-            <input type="hidden" name="answers[${questionIndex}].answerType" value="${question.answerType}">
-        </c:forEach>
-        <br> --%>
+     
         <input type="submit" value="제출">
     </form>
 </body>
