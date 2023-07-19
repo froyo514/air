@@ -106,8 +106,27 @@ public class Survey2ndController {
 	
 	@PostMapping("/test1")
     public String registerSurveySubmit(@ModelAttribute("surveyVO") SurveyVO surveyVO,
-                                       @ModelAttribute("questionVO") QuestionVO questionVO) {
+                                       @ModelAttribute("questionVO") QuestionVO questionVO, Errors errors) {
 		
+	
+		List<QuestionVO> list = new ArrayList<QuestionVO>();
+		try {
+			JSONParser jsonParser = new JSONParser();
+			JSONArray jsonArray = (JSONArray) jsonParser.parse(surveyVO.getQuestions());
+			for(int i=0; i<jsonArray.size(); i++) {
+				JSONObject jObj = (JSONObject)jsonArray.get(i);
+				QuestionVO qVo = new QuestionVO();
+				qVo.setQuestion_no(((Long)jObj.get("question_no")).intValue());
+				qVo.setQuestion_text((String)jObj.get("question_text"));
+				qVo.setQuestion_type(QuestionType.valueOf((String)jObj.get("question_type")));
+				qVo.setQuestion_options((String)jObj.get("question_options"));
+				Object options = jObj.get("question_options");
+				qVo.setQuestion_options(options == null ? "" :(String)jObj.get("question_options"));
+				list.add(qVo);
+			}
+		}catch (Exception e) {
+			
+		}
 		
 		System.out.println("SurveyVO: " + surveyVO);
 	    System.out.println("QuestionVO: " + questionVO);

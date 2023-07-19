@@ -152,13 +152,64 @@ body {
 		}
 		#text{
 	font-size:70px;
-	height:150px;
+	height:130px;
 	text-align:center;
 	text-decoration-line: underline;
     text-underline-position:under;
 }
 </style>
 </head>
+
+
+<body>
+<div id ="text"></div>
+    <form action="/survey2nd/test1" method="post" modelAttribute="surveyVO">
+        <div>
+            <p>
+                <label for="survey_name">설문조사 제목</label>
+                <input type="text" style="width: 300px;" name="survey_name" id="survey_name" required>
+            </p>
+            <p>
+                <label for="survey_desc" style="display: inline-block; vertical-align: top;">설문조사 설명</label>
+                <textarea style="width: 300px; height: 100px;" name="survey_desc" id="survey_desc" required></textarea>
+            </p>
+        </div>
+
+        <div id="question-container" class="question">
+    <label for="questionVO.question_text">질문:</label>
+    <input type="text" name="question_text" id="questionVO.question_text" required><br><br>
+
+    <label for="questionVO.question_options">선택지:</label>
+    <input type="text" name="question_options" id="questionVO.question_options" required><br><br>
+
+    <label for="questionVO.question_type">질문 유형:</label>
+    <select name="question_type" id="questionVO.question_type" required>
+        <option value="ANSWER">답변</option>
+        <option value="RADIO">라디오 버튼</option>
+        <option value="SELECT">셀렉트바</option>
+    </select><br><br>
+    
+    
+</div>
+
+
+        <button type="button" onclick="addQuestion()">질문 추가</button><br><br>
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
 	<%-- <form:form action="/survey2nd/registerSurvey" method="post" modelAttribute="surveyVO">
@@ -187,39 +238,5 @@ body {
 		
 		
 	</div>
+	
 </form:form> --%> 
-<body>
-<div id ="text">설문등록하기</div>
-    <form action="/survey2nd/test1" method="post" modelAttribute="surveyVO">
-        <div>
-            <p>
-                <label for="survey_name">설문조사 제목</label>
-                <input type="text" style="width: 300px;" name="survey_name" id="survey_name" required>
-            </p>
-            <p>
-                <label for="survey_desc" style="display: inline-block; vertical-align: top;">설문조사 설명</label>
-                <textarea style="width: 300px; height: 100px;" name="survey_desc" id="survey_desc" required></textarea>
-            </p>
-        </div>
-
-        <div id="question-container" class="question">
-    <label for="questionVO.question_text">질문:</label>
-    <input type="text" name="questionVO.question_text" id="questionVO.question_text" required><br><br>
-
-    <label for="questionVO.question_options">선택지:</label>
-    <input type="text" name="questionVO.question_options" id="questionVO.question_options" required><br><br>
-
-    <label for="questionVO.question_type">질문 유형:</label>
-    <select name="questionVO.question_type" id="questionVO.question_type" required>
-        <option value="text">텍스트</option>
-        <option value="radio">라디오 버튼</option>
-        <option value="checkbox">체크 박스</option>
-    </select><br><br>
-</div>
-
-
-        <button type="button" onclick="addQuestion()">질문 추가</button><br><br>
-        <input type="submit" value="제출">
-    </form>
-</body>
-</html>
