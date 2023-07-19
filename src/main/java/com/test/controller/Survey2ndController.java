@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -103,5 +104,22 @@ public class Survey2ndController {
 		return "redirect:/survey2nd/";
 	}
 	
+	@PostMapping("/test1")
+    public String registerSurveySubmit(@ModelAttribute("surveyVO") SurveyVO surveyVO,
+                                       @ModelAttribute("questionVO") QuestionVO questionVO) {
+		
+		
+		System.out.println("SurveyVO: " + surveyVO);
+	    System.out.println("QuestionVO: " + questionVO);
+	    
+        // 설문조사 등록
+        surveyService.registerSurvey(surveyVO);
+
+        // 질문 등록
+        questionVO.setSurvey_id(surveyVO.getSurvey_id());
+        questionService.registerQuestion(questionVO);
+
+        return "redirect:/survey2nd/registerSurvey";
+    }
 	
 }

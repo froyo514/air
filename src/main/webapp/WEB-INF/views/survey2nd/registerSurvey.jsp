@@ -12,7 +12,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.5/xlsx.full.min.js"></script>
 
 <script>
-$(function() {
+/* $(function() {
 	$("#excelFile").change(function(){
 		let input = event.target;
 		let reader = new FileReader();
@@ -31,8 +31,78 @@ $(function() {
 	reader.readAsBinaryString(input.files[0]);
 
 	
-});
+}); */
+var questionCount = 1; // 초기 질문 개수
 
+function addQuestion() {
+    if (questionCount < 5) { // 최대 5개의 질문을 추가할 수 있도록 제한
+        var questionContainer = document.getElementById('question-container');
+
+        var newQuestionDiv = document.createElement('div');
+        newQuestionDiv.classList.add('question');
+
+        var questionLabel = document.createElement('label');
+        questionLabel.htmlFor = 'question_text_' + questionCount;
+        questionLabel.textContent = '질문:';
+        newQuestionDiv.appendChild(questionLabel);
+
+        var questionText = document.createElement('input');
+        questionText.type = 'text';
+        questionText.name = 'question_text_' + questionCount;
+        questionText.id = 'question_text_' + questionCount;
+        questionText.required = true;
+        newQuestionDiv.appendChild(questionText);
+
+        newQuestionDiv.appendChild(document.createElement('br'));
+
+        var optionsLabel = document.createElement('label');
+        optionsLabel.htmlFor = 'question_options_' + questionCount;
+        optionsLabel.textContent = '선택지:';
+        newQuestionDiv.appendChild(optionsLabel);
+
+        var questionOptions = document.createElement('input');
+        questionOptions.type = 'text';
+        questionOptions.name = 'question_options_' + questionCount;
+        questionOptions.id = 'question_options_' + questionCount;
+        questionOptions.required = true;
+        newQuestionDiv.appendChild(questionOptions);
+
+        newQuestionDiv.appendChild(document.createElement('br'));
+
+        var typeLabel = document.createElement('label');
+        typeLabel.htmlFor = 'question_type_' + questionCount;
+        typeLabel.textContent = '질문 유형:';
+        newQuestionDiv.appendChild(typeLabel);
+
+        var questionType = document.createElement('select');
+        questionType.name = 'question_type_' + questionCount;
+        questionType.id = 'question_type_' + questionCount;
+        questionType.required = true;
+
+        var textOption = document.createElement('option');
+        textOption.value = 'text';
+        textOption.text = '텍스트';
+        questionType.appendChild(textOption);
+
+        var radioOption = document.createElement('option');
+        radioOption.value = 'radio';
+        radioOption.text = '라디오 버튼';
+        questionType.appendChild(radioOption);
+
+        var checkboxOption = document.createElement('option');
+        checkboxOption.value = 'checkbox';
+        checkboxOption.text = '체크 박스';
+        questionType.appendChild(checkboxOption);
+
+        newQuestionDiv.appendChild(questionType);
+
+        questionContainer.appendChild(newQuestionDiv);
+
+        questionCount++;
+    } else {
+        alert('최대 5개의 질문을 추가할 수 있습니다.');
+    }
+}
 </script>
 <style>
 body {
@@ -89,9 +159,9 @@ body {
 }
 </style>
 </head>
-<body>
-	<div id ="text">설문등록하기</div>
-	<form:form action="/survey2nd/registerSurvey" method="post" modelAttribute="surveyVO">
+
+	
+	<%-- <form:form action="/survey2nd/registerSurvey" method="post" modelAttribute="surveyVO">
 	
  <div>
 	<p>
@@ -117,6 +187,39 @@ body {
 		
 		
 	</div>
-</form:form>
+</form:form> --%> 
+<body>
+<div id ="text">설문등록하기</div>
+    <form action="/survey2nd/test1" method="post" modelAttribute="surveyVO">
+        <div>
+            <p>
+                <label for="survey_name">설문조사 제목</label>
+                <input type="text" style="width: 300px;" name="survey_name" id="survey_name" required>
+            </p>
+            <p>
+                <label for="survey_desc" style="display: inline-block; vertical-align: top;">설문조사 설명</label>
+                <textarea style="width: 300px; height: 100px;" name="survey_desc" id="survey_desc" required></textarea>
+            </p>
+        </div>
+
+        <div id="question-container" class="question">
+    <label for="questionVO.question_text">질문:</label>
+    <input type="text" name="questionVO.question_text" id="questionVO.question_text" required><br><br>
+
+    <label for="questionVO.question_options">선택지:</label>
+    <input type="text" name="questionVO.question_options" id="questionVO.question_options" required><br><br>
+
+    <label for="questionVO.question_type">질문 유형:</label>
+    <select name="questionVO.question_type" id="questionVO.question_type" required>
+        <option value="text">텍스트</option>
+        <option value="radio">라디오 버튼</option>
+        <option value="checkbox">체크 박스</option>
+    </select><br><br>
+</div>
+
+
+        <button type="button" onclick="addQuestion()">질문 추가</button><br><br>
+        <input type="submit" value="제출">
+    </form>
 </body>
 </html>

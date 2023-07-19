@@ -19,7 +19,7 @@
 	</select>
  	<insert id="insertQuestion">
 		insert into tbl_questions (survey_id, question_no, question_text, question_options, question_type)
-			values (#{survey_id}, #{question_no}, #{question_text}, #{question_options}, #{question_type})
+			values (#{survey_id,jdbcType=INTEGER}, #{question_no,jdbcType=INTEGER}, #{question_text,jdbcType=INTEGER}, #{question_options,jdbcType=INTEGER}, #{question_type,jdbcType=INTEGER})
 	</insert>
 	<update id = "updateQuestion">
 		update tbl_questions set question_no=#{question_no}, qusestion_text=#{question_text}
